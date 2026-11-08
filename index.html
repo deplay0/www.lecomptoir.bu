@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le Comptoir Déco – Décoration d’intérieur et événements à Bujumbura</title>
+<meta name="description" content="Le Comptoir Déco : décoration de mariages, salons, bureaux, restaurants et événements. Découvrez nos réalisations et demandez votre devis et facture proforma en ligne.">
+<meta property="og:title" content="Le Comptoir Déco – Décoration d’intérieur">
+<meta property="og:description" content="Réalisations, packs de décoration, devis et facture proforma en ligne.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Le Comptoir Déco","telephone":"+257 62381032","email":"plamedindagano1@gmail.com","address":"Kigobe Sud, Av Kigunga N°10, Bujumbura"}</script>
+<style>
+:root{--ink:#1F1B18;--gold:#C9A24D;--terra:#B5654A;--bg:#FAF6F0;--card:#fff;--txt:#2E2A27;--line:#e6dccd;--acc:#8f4a34;--btn:#1F1B18;--btnt:#C9A24D;--r:10px}
+[data-theme=dark]{--bg:#161311;--card:#211c19;--txt:#EDE6DC;--line:#3a322d;--acc:#C9A24D;--btn:#C9A24D;--btnt:#1F1B18}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;font:400 1rem/1.65 Poppins,sans-serif;background:var(--bg);color:var(--txt)}
+h1,h2,h3{font-family:"Playfair Display",serif;line-height:1.2;margin:0 0 .6rem}
+h2{font-size:clamp(1.6rem,5vw,2.4rem)}img{max-width:100%}
+a{color:var(--acc)}:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.wrap{max-width:1080px;margin:auto;padding:0 1.1rem}section{padding:3.5rem 0}
+.sub{max-width:60ch;opacity:.85;margin:0 0 1.6rem}
+.btn{display:inline-block;border:0;border-radius:999px;padding:.75rem 1.4rem;font:500 .95rem Poppins,sans-serif;background:var(--btn);color:var(--btnt);cursor:pointer;text-decoration:none}
+.btn.alt{background:transparent;color:inherit;border:1.5px solid currentColor}
+.btn:hover{filter:brightness(1.12)}
+/* menu */
+header{position:fixed;inset:0 0 auto;z-index:50;background:var(--ink);color:#FAF6F0}
+.bar{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font:italic 500 1.25rem "Playfair Display",serif;color:#FAF6F0;text-decoration:none;display:flex;gap:.5rem;align-items:center}
+.brand img{height:36px}.brand span{color:var(--gold)}
+nav{display:none;position:absolute;top:60px;left:0;right:0;background:var(--ink);padding:.5rem 1.1rem 1rem}
+nav.open{display:block}nav a{display:block;padding:.6rem 0;color:#FAF6F0;text-decoration:none;border-bottom:1px solid #3a322d}
+.tools{display:flex;gap:.4rem}.ib{background:none;border:1px solid #6b5f55;color:#FAF6F0;border-radius:8px;width:40px;height:36px;cursor:pointer;font-size:1.1rem}
+@media(min-width:860px){nav{display:flex;position:static;padding:0;gap:1.1rem;background:none}nav a{border:0;padding:0;font-size:.9rem}#burger{display:none}}
+/* hero */
+.hero{min-height:92vh;display:flex;align-items:center;color:#FAF6F0;padding-top:60px;position:relative;background-size:cover;background-position:center}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(31,27,24,.88),rgba(31,27,24,.45))}
+.hero .wrap{position:relative}.hero h1{font-size:clamp(2.2rem,8vw,4rem);max-width:15ch}
+.hero p{max-width:48ch;font-weight:300;font-size:1.05rem}.cap{font-size:.75rem;opacity:.7}
+.row{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.4rem}
+/* gallery */
+.filters{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.2rem}
+.filters button{border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:999px;padding:.4rem 1rem;cursor:pointer;font:inherit;font-size:.88rem}
+.filters button[aria-pressed=true]{background:var(--btn);color:var(--btnt);border-color:var(--btn)}
+.grid{display:grid;gap:.8rem;grid-template-columns:repeat(2,1fr)}
+@media(min-width:760px){.grid{grid-template-columns:repeat(3,1fr)}}
+.ph{background-size:cover;background-position:center;display:flex;align-items:flex-end;color:#fff;font-size:.82rem}
+.ph span{width:100%;padding:.6rem .7rem;background:linear-gradient(transparent,rgba(0,0,0,.65))}
+.tile{aspect-ratio:1;border-radius:var(--r);border:0;cursor:zoom-in;text-align:left;padding:0;font-family:inherit}
+.tile.hide{display:none}
+#lb{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;z-index:100;padding:1rem}
+#lb.on{display:flex}#lbimg{width:min(92vw,820px);aspect-ratio:4/3;border-radius:var(--r)}
+#lbx{position:absolute;top:12px;right:14px;font-size:1.6rem}
+/* before/after */
+.ba{position:relative;aspect-ratio:16/10;border-radius:var(--r);overflow:hidden;max-width:760px}
+.ba .ph{position:absolute;inset:0}.ba .after{clip-path:inset(0 0 0 50%)}
+.ba input{position:absolute;left:0;right:0;bottom:10px;width:100%;accent-color:var(--gold)}
+/* cards */
+.cards{display:grid;gap:1rem}@media(min-width:760px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:1.4rem}
+.card.star{border:2px solid var(--gold)}.price{font:700 1.5rem "Playfair Display",serif;color:var(--acc)}
+.card ul{padding-left:1.1rem;margin:.8rem 0 1.2rem}
+/* form */
+.fgrid{display:grid;gap:.9rem}@media(min-width:760px){.fgrid{grid-template-columns:1fr 1fr}.full{grid-column:1/-1}}
+label{display:block;font-size:.85rem;font-weight:500;margin-bottom:.2rem}
+input,select,textarea{width:100%;padding:.65rem .75rem;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--txt);font:inherit}
+input[aria-invalid=true],select[aria-invalid=true]{border-color:#c0392b}
+.err{color:#c0392b;font-size:.78rem;min-height:1em;display:block}[data-theme=dark] .err{color:#ff8a7a}
+.chk label{display:inline-flex;gap:.4rem;align-items:center;margin-right:1rem;font-weight:400}.chk input{width:auto}
+.srv{display:flex;justify-content:space-between;align-items:center;gap:.7rem;padding:.6rem 0;border-bottom:1px solid var(--line)}
+.srv input{width:72px;text-align:center}.srv small{display:block;opacity:.7}
+.tot{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:1rem;margin:1rem 0}
+.tot div{display:flex;justify-content:space-between;padding:.2rem 0}.tot .g{font-weight:600;font-size:1.1rem;border-top:1px solid var(--line);margin-top:.3rem;padding-top:.5rem}
+#ok{display:none;background:var(--ink);color:#FAF6F0;border-left:4px solid var(--gold);padding:1rem;border-radius:var(--r);margin-top:1rem}
+/* proforma */
+#pf{display:none;background:#fff;color:#1F1B18;padding:1.4rem;border:1px solid var(--line);border-radius:var(--r);margin-top:1.4rem;font-size:.88rem}
+#pf table{width:100%;border-collapse:collapse;margin:1rem 0}#pf th,#pf td{padding:.4rem;border-bottom:1px solid #ddd;text-align:left}
+#pf td.n,#pf th.n{text-align:right;white-space:nowrap}#pf .logo{font:italic 500 1.5rem "Playfair Display",serif}
+/* misc */
+.quote{border-left:3px solid var(--gold);padding-left:1rem}.team{text-align:center}.team .ph{aspect-ratio:1;border-radius:50%;max-width:140px;margin:0 auto .6rem}
+details{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:.8rem 1rem;margin-bottom:.6rem}summary{cursor:pointer;font-weight:500}
+footer{background:var(--ink);color:#FAF6F0;padding:2.5rem 0 5rem}footer a{color:var(--gold)}
+#wa{position:fixed;right:16px;bottom:16px;z-index:60;background:#25D366;color:#fff;border-radius:999px;padding:.8rem 1.1rem;font-weight:600;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+.rv{opacity:0;transform:translateY(14px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@media print{body *{visibility:hidden}#pf,#pf *{visibility:visible}#pf{display:block!important;position:absolute;left:0;top:0;width:100%;border:0}}
+.st{display:inline-block;background:#C9A24D;color:#1F1B18;border-radius:999px;padding:.1rem .8rem;font-size:.85rem;font-weight:500}.msg{font-size:.85rem;min-height:1.3em}.card label{margin-top:.6rem}.card .btn{margin-top:.6rem}
+</style>
+</head>
+<body>
+<script>
+/* ============ CONFIGURATION : modifiez uniquement ce bloc ============ */
+var CONFIG = {
+  nom: "Le Comptoir Déco",
+  slogan: "Décoration d’intérieur",
+  logo: "images/logo.jpg",                                  // URL du logo (laisser vide = logo en texte)
+  telephone: "+257 62381032",
+  whatsapp: "25761912543",                   // format international sans + (Burundi : 257 + numéro)
+  email: "plamedindagano1@gmail.com",
+  adresse: "Kigobe Sud, Av Kigunga N°10",
+  horaires: "16h30 – 18h30",
+  facebook: "https://www.facebook.com/",     // collez le lien de votre page Le Comptoir
+  devise: "FBu",
+  tva: 0.18,                                 // 18 %
+  transport: 20000,                          // forfait transport
+  installationPct: 0.10,                     // installation = 10 % du sous-total
+  acomptePct: 0.50,                          // acompte de 50 %
+  validiteJours: 15,
+  conditions: "Acompte à la commande, solde le jour de la prestation. Proforma valable 15 jours. Prix indicatifs, confirmés après visite du lieu.",
+  /* Images : collez l’URL de chaque photo (vide = bloc de remplacement) */
+  images: {
+    banniere: "images/wax-2.jpg", avant: "", apres: "",
+    galerie: ["images/wax-1.jpg","images/wax-2.jpg","images/salon.jpg","images/resto-kente.jpg","images/resto-vert.jpg","images/resto-papillons.jpg","images/resto-mur.jpg","images/resto-bambou.jpg"],
+    equipe: ["","",""]
+  },
+  /* Packs et prix « à partir de » */
+  packs: [
+    {id:"p1", nom:"Essentiel", prix:150000, items:["Décoration d’une table principale","Nappes et centres de table","Mise en place sur site"]},
+    {id:"p2", nom:"Confort", prix:350000, star:true, items:["Fond de scène ou arche","Éclairage d’ambiance","Décoration de 5 tables","Installation et démontage"]},
+    {id:"p3", nom:"Prestige", prix:800000, items:["Conception sur mesure","Décor floral complet","Drapés, éclairage et mobilier","Équipe dédiée le jour J"]}
+  ],
+  /* Prestations à la carte pour le devis */
+  extras: [
+    {id:"e1", nom:"Décoration de table", unite:"par table", prix:25000},
+    {id:"e2", nom:"Arche ou fond de scène", unite:"forfait", prix:120000},
+    {id:"e3", nom:"Drapés et rideaux", unite:"par mètre", prix:8000},
+    {id:"e4", nom:"Éclairage d’ambiance", unite:"forfait", prix:80000},
+    {id:"e5", nom:"Composition florale", unite:"pièce", prix:35000},
+    {id:"e6", nom:"Housses de chaises", unite:"par 10 chaises", prix:40000}
+  ],
+  /* Galerie : cat = mariage | salon | bureau | restaurant | evenement */
+  galerie: [
+    ["mariage","Table de fête en wax turquoise"],["evenement","Table dressée wax et fleurs"],["salon","Salon aux fauteuils orange"],
+    ["restaurant","Plafond en pagnes kente"],["restaurant","Mur végétal et bois"],["restaurant","Fresque de papillons"],
+    ["restaurant","Coin mur végétal"],["restaurant","Lianes et lanternes"]
+  ],
+  mobileMoney: {operateur:"Lumicash / EcoCash", numero:"", titulaire:"Le Comptoir Déco"},   // numéro de paiement de l’acompte
+  confidentialite: "Vos données (nom, téléphone, email, adresse) servent uniquement à traiter votre demande et à vous contacter. Elles transitent par WhatsApp ou email, ne sont pas vendues, et vous pouvez demander leur modification ou leur suppression à tout moment par WhatsApp.",
+  temoignages: [
+    ["Une équipe à l’écoute : notre mariage était exactement comme dans nos rêves.","Aline & Patrick"],
+    ["Le restaurant a été transformé en deux jours. Clients ravis.","Gérant de restaurant"],
+    ["Devis clair, installation propre et ponctuelle.","Directrice d’agence"]
+  ],
+  equipe: [["Prénom Nom","Direction et conception"],["Prénom Nom","Chef d’installation"],["Prénom Nom","Relation clients"]]
+};
+/* ============ FIN DE LA CONFIGURATION ============ */
+</script>
+
+<header><div class="wrap bar">
+  <a class="brand" href="#accueil" id="brand"></a>
+  <nav id="nav" aria-label="Menu principal">
+    <a href="#realisations">Réalisations</a><a href="#propositions">Propositions</a><a href="#devis">Devis</a><a href="#client">Espace client</a>
+    <a href="#avis">Avis</a><a href="#apropos">À propos</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+  </nav>
+  <div class="tools">
+    <button class="ib" id="theme" onclick="toggleTheme()" aria-label="Changer de thème">◐</button>
+    <button class="ib" id="burger" onclick="toggleMenu()" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+  </div>
+</div></header>
+
+<main>
+<section class="hero" id="accueil">
+  <div class="wrap">
+    <h1>Des lieux qui vous ressemblent</h1>
+    <p>Mariages, salons, bureaux, restaurants et événements : nous imaginons, installons et démontons votre décoration, du devis au jour J.</p>
+    <div class="row"><a class="btn" href="#devis" style="background:#C9A24D;color:#1F1B18">Demander un devis</a><a class="btn alt" href="#realisations">Voir nos réalisations</a></div>
+    <p class="cap" id="heroCap"></p>
+  </div>
+</section>
+
+<section id="realisations"><div class="wrap rv">
+  <h2>Nos réalisations</h2><p class="sub">Touchez une photo pour l’agrandir.</p>
+  <div class="filters" id="filters" role="group" aria-label="Filtrer les réalisations"></div>
+  <div class="grid" id="grid"></div>
+  <h3 style="margin-top:2.5rem">Avant / après</h3>
+  <div class="ba"><div class="ph" id="baA" role="img"></div><div class="ph after" id="baB" role="img"></div>
+    <input type="range" min="0" max="100" value="50" oninput="document.getElementById('baB').style.clipPath='inset(0 0 0 '+this.value+'%)'" aria-label="Comparer avant et après"></div>
+</div></section>
+
+<section id="propositions" style="background:var(--card)"><div class="wrap rv">
+  <h2>Propositions de déco</h2><p class="sub">Trois packs de départ, adaptables à votre lieu et à votre budget.</p>
+  <div class="cards" id="packs"></div>
+</div></section>
+
+<section id="devis"><div class="wrap rv">
+  <h2>Demande de devis et de proforma</h2>
+  <p class="sub">Remplissez vos informations, choisissez vos prestations : le total se calcule seul. Envoyez ensuite votre demande par WhatsApp ou par email.</p>
+  <div class="fgrid">
+    <div><label for="f_nom">Nom complet *</label><input id="f_nom" autocomplete="name"><small class="err" id="e_f_nom"></small></div>
+    <div><label for="f_tel">Téléphone *</label><input id="f_tel" type="tel" autocomplete="tel"><small class="err" id="e_f_tel"></small></div>
+    <div><label for="f_mail">Email *</label><input id="f_mail" type="email" autocomplete="email"><small class="err" id="e_f_mail"></small></div>
+    <div><label for="f_type">Type de client *</label><select id="f_type"><option value="">Choisir</option><option>Particulier</option><option>Entreprise</option></select><small class="err" id="e_f_type"></small></div>
+    <div><label for="f_lieu">Événement ou lieu *</label><select id="f_lieu"><option value="">Choisir</option><option>Mariage</option><option>Salon / maison</option><option>Bureau</option><option>Restaurant</option><option>Événement</option></select><small class="err" id="e_f_lieu"></small></div>
+    <div><label for="f_date">Date prévue *</label><input id="f_date" type="date"><small class="err" id="e_f_date"></small></div>
+    <div><label for="f_adr">Adresse du lieu *</label><input id="f_adr" autocomplete="street-address"><small class="err" id="e_f_adr"></small></div>
+    <div><label for="f_surf">Surface (m²)</label><input id="f_surf" type="number" min="0"></div>
+    <div><label for="f_bud">Budget estimé (<span class="dv"></span>)</label><input id="f_bud" type="number" min="0"></div>
+    <div><label for="f_style">Style souhaité</label><select id="f_style"><option value="">Pas de préférence</option><option>Moderne</option><option>Africain / wax</option><option>Bohème et végétal</option><option>Classique chic</option></select></div>
+    <div class="full chk"><label style="display:block">Services</label>
+      <label><input type="checkbox" id="s_loc"> Location</label><label><input type="checkbox" id="s_ins"> Installation</label><label><input type="checkbox" id="s_dem"> Démontage</label></div>
+    <div class="full chk"><label><input type="checkbox" id="f_ok"> J’accepte que mes données servent à traiter ma demande (voir confidentialité) *</label><small class="err" id="e_f_ok"></small></div>
+    <div class="full"><label for="f_msg">Message</label><textarea id="f_msg" rows="3"></textarea></div>
+  </div>
+
+  <h3 style="margin-top:2rem">Vos prestations</h3>
+  <div id="srv"></div>
+  <small class="err" id="e_srv"></small>
+  <div class="tot" id="tot" aria-live="polite"></div>
+  <div class="row" style="margin-top:0">
+    <button class="btn" onclick="send('wa')">Envoyer par WhatsApp</button>
+    <button class="btn alt" onclick="send('mail')">Envoyer par email</button>
+    <button class="btn alt" onclick="showPf()">Voir la facture proforma</button>
+  </div>
+  <div id="ok" role="status"></div>
+
+  <div id="pf"></div>
+</div></section>
+
+<section id="client" style="background:var(--card)"><div class="wrap rv">
+  <h2>Espace client</h2><p class="sub">Tout passe par WhatsApp : ni mot de passe, ni compte à retenir.</p>
+  <div class="cards">
+    <div class="card"><h3>Inscription et profil</h3>
+      <label for="c_nom">Nom *</label><input id="c_nom"><label for="c_tel">Téléphone *</label><input id="c_tel" type="tel"><label for="c_mail">Email *</label><input id="c_mail" type="email">
+      <label for="c_type">Type de client *</label><select id="c_type" onchange="typeChg()"><option value="">Choisir</option><option>Particulier</option><option>Entreprise</option></select>
+      <div id="c_entw" style="display:none"><label for="c_ent">Nom de l’entreprise *</label><input id="c_ent"></div>
+      <div class="chk"><label><input type="checkbox" id="c_ok"> J’accepte la mention de confidentialité *</label></div>
+      <button class="btn" onclick="register(false)">S’inscrire par WhatsApp</button> <button class="btn alt" onclick="register(true)">Modifier mon profil</button>
+      <p class="msg" id="c_msg" role="status"></p></div>
+    <div class="card"><h3>Suivre ma demande</h3><p>Statut : <span class="st">On va vous contacter</span></p>
+      <label for="r_num">Numéro de demande *</label><input id="r_num" placeholder="DEV-20261108-1234"><label for="r_date">Date de la prestation (pour accepter ou refuser)</label><input id="r_date" type="date">
+      <button class="btn alt" onclick="follow('photos')">Envoyer mes photos d’inspiration</button>
+      <button class="btn" onclick="follow('accept')">Accepter le devis</button> <button class="btn alt" onclick="follow('refuse')">Refuser</button>
+      <p class="msg" id="r_msg" role="status"></p></div>
+    <div class="card"><h3>Payer l’acompte</h3><p id="a_info"></p>
+      <label for="a_ref">Référence du paiement *</label><input id="a_ref"><label for="a_mont">Montant (<span class="dv"></span>) *</label><input id="a_mont" type="number" min="1">
+      <label for="a_date">Date *</label><input id="a_date" type="date"><label for="a_mode">Mode</label><select id="a_mode"><option>Mobile Money</option><option>Espèces</option><option>Virement</option></select>
+      <button class="btn" onclick="payDecl()">Déclarer mon paiement</button><p class="msg" id="a_msg" role="status"></p></div>
+  </div>
+  <p class="sub" id="priv" style="margin-top:1.4rem;font-size:.85rem"></p>
+</div></section>
+
+<section id="avis" style="background:var(--card)"><div class="wrap rv">
+  <h2>Ils nous ont fait confiance</h2><div class="cards" id="temo"></div>
+</div></section>
+
+<section id="apropos"><div class="wrap rv">
+  <h2>À propos</h2>
+  <p class="sub">Le Comptoir Déco est une entreprise de décoration d’intérieur à Bujumbura. Nous concevons des ambiances chaleureuses, mêlant matières naturelles, couleurs africaines et touches dorées, pour les particuliers comme pour les professionnels.</p>
+  <div class="cards" id="team"></div>
+</div></section>
+
+<section id="faq" style="background:var(--card)"><div class="wrap rv">
+  <h2>Questions fréquentes</h2>
+  <details><summary>Dois-je payer un acompte ?</summary><p>Oui, l’acompte indiqué sur la proforma confirme votre date. Le solde est réglé le jour de la prestation.</p></details>
+  <details><summary>Le devis est-il définitif ?</summary><p>Il est indicatif. Nous le confirmons après avoir vu le lieu ou échangé avec vous.</p></details>
+  <details><summary>Installez-vous et démontez-vous le décor ?</summary><p>Oui : location, installation et démontage sont disponibles, ensemble ou séparément.</p></details>
+  <details><summary>Puis-je personnaliser un pack ?</summary><p>Oui, ajoutez des prestations à la carte dans le devis ou décrivez vos envies dans le message.</p></details>
+  <details><summary>Combien de temps à l’avance réserver ?</summary><p>Idéalement 3 à 4 semaines, davantage pour un mariage.</p></details>
+</div></section>
+</main>
+
+<footer id="contact"><div class="wrap">
+  <h2>Contact</h2>
+  <p id="ct"></p>
+</div></footer>
+<a id="wa" href="#" target="_blank" rel="noopener" aria-label="Écrire sur WhatsApp">WhatsApp</a>
+<div id="lb" role="dialog" aria-modal="true" aria-label="Photo agrandie" onclick="closeLb()"><button class="btn alt" id="lbx" style="color:#fff" aria-label="Fermer">✕</button><div class="ph" id="lbimg" role="img"></div></div>
+
+<script>
+/* ---------- Outils ---------- */
+var $ = function(i){return document.getElementById(i)};
+var GRAD = ["linear-gradient(135deg,#1F1B18,#B5654A)","linear-gradient(135deg,#C9A24D,#1F1B18)","linear-gradient(135deg,#B5654A,#C9A24D)","linear-gradient(135deg,#2E2A27,#C9A24D)"];
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function fmt(n){return Math.round(n).toLocaleString("fr-FR")+" "+CONFIG.devise}
+/* Applique une image (ou un dégradé de remplacement) + légende */
+function setPh(el,url,label,i){
+  el.className=(el.className+" ph").replace(/\bph\b(?=.*\bph\b)/,"");
+  el.style.backgroundImage=url?"url('"+url+"')":GRAD[i%4];
+  el.setAttribute("role","img");el.setAttribute("aria-label",label);
+  el.innerHTML="<span>"+esc(label)+(url?"":" — photo à remplacer")+"</span>";
+}
+/* ---------- Construction de la page ---------- */
+function init(){
+  var c=CONFIG;
+  $("brand").innerHTML=(c.logo?'<img src="'+esc(c.logo)+'" alt="">':"")+"Le Comptoir <span>Déco</span>";
+  document.querySelectorAll(".dv").forEach(function(e){e.textContent=c.devise});
+  var h=document.querySelector(".hero");
+  if(c.images.banniere){h.style.backgroundImage="url('"+c.images.banniere+"')"}else{h.style.backgroundImage=GRAD[0];$("heroCap").textContent="Bannière à remplacer par une photo de salon ou de mariage décoré."}
+  /* filtres */
+  var cats=[["tous","Tous"],["mariage","Mariage"],["salon","Salon"],["bureau","Bureau"],["restaurant","Restaurant"],["evenement","Événement"]];
+  $("filters").innerHTML=cats.map(function(k,i){return '<button aria-pressed="'+(i==0)+'" onclick="filt(\''+k[0]+'\',this)">'+k[1]+'</button>'}).join("");
+  $("grid").innerHTML=c.galerie.map(function(g,i){return '<button class="tile ph" data-c="'+g[0]+'" data-i="'+i+'" onclick="openLb('+i+')"></button>'}).join("");
+  document.querySelectorAll(".tile").forEach(function(t){var i=+t.dataset.i;setPh(t,c.images.galerie[i]||"",c.galerie[i][1],i)});
+  setPh($("baA"),c.images.avant,"Avant",3);setPh($("baB"),c.images.apres,"Après",1);$("baB").className="ph after";
+  /* packs */
+  $("packs").innerHTML=c.packs.map(function(p){return '<div class="card'+(p.star?' star':'')+'"><h3>'+p.nom+'</h3><div class="price">À partir de '+fmt(p.prix)+'</div><ul>'+p.items.map(function(x){return "<li>"+x+"</li>"}).join("")+'</ul><button class="btn" onclick="pick(\''+p.id+'\')">Choisir ce pack</button></div>'}).join("");
+  /* prestations */
+  var all=c.packs.map(function(p){return {id:p.id,nom:"Pack "+p.nom,unite:"forfait",prix:p.prix}}).concat(c.extras);
+  c.all=all;
+  $("srv").innerHTML=all.map(function(s){return '<div class="srv"><div>'+s.nom+'<small>'+fmt(s.prix)+' · '+s.unite+'</small></div><input type="number" min="0" value="0" id="q_'+s.id+'" onchange="calc()" oninput="calc()" aria-label="Quantité : '+esc(s.nom)+'"></div>'}).join("");
+  /* témoignages, équipe */
+  $("temo").innerHTML=c.temoignages.map(function(t){return '<blockquote class="quote card" style="margin:0"><p>«&nbsp;'+t[0]+'&nbsp;»</p><footer style="all:unset;font-weight:500">'+t[1]+'</footer></blockquote>'}).join("");
+  $("team").innerHTML=c.equipe.map(function(m,i){return '<div class="team"><div class="ph" id="tm'+i+'"></div><strong>'+m[0]+'</strong><br><small>'+m[1]+'</small></div>'}).join("");
+  c.equipe.forEach(function(m,i){setPh($("tm"+i),c.images.equipe[i]||"",m[0],i)});
+  /* contact */
+  $("ct").innerHTML='Téléphone : <a href="tel:'+c.telephone.replace(/\s/g,"")+'">'+c.telephone+'</a><br>Email : <a href="mailto:'+c.email+'">'+c.email+'</a><br>Adresse : '+c.adresse+'<br>Horaires : '+c.horaires+'<br>Facebook : <a href="'+c.facebook+'" target="_blank" rel="noopener">Le Comptoir</a>';
+  $("wa").href="https://wa.me/"+c.whatsapp+"?text="+encodeURIComponent("Bonjour "+c.nom+", je souhaite des informations.");
+  $("f_date").min=new Date().toISOString().slice(0,10);
+  calc();
+  /* thème */
+  if(matchMedia("(prefers-color-scheme: dark)").matches)document.documentElement.dataset.theme="dark";
+  /* apparition douce au défilement */
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.08});
+  document.querySelectorAll(".rv").forEach(function(e){io.observe(e)});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape")closeLb()});
+}
+function toggleTheme(){var d=document.documentElement;d.dataset.theme=d.dataset.theme==="dark"?"light":"dark"}
+function toggleMenu(){var n=$("nav"),o=n.classList.toggle("open");$("burger").setAttribute("aria-expanded",o)}
+document.addEventListener("click",function(e){if(e.target.closest("nav a"))$("nav").classList.remove("open")});
+/* ---------- Galerie ---------- */
+function filt(cat,b){
+  document.querySelectorAll("#filters button").forEach(function(x){x.setAttribute("aria-pressed",x===b)});
+  document.querySelectorAll(".tile").forEach(function(t){t.classList.toggle("hide",cat!=="tous"&&t.dataset.c!==cat)});
+}
+function openLb(i){var l=$("lbimg");setPh(l,CONFIG.images.galerie[i]||"",CONFIG.galerie[i][1],i);l.className="ph";$("lb").classList.add("on");$("lbx").focus()}
+function closeLb(){$("lb").classList.remove("on")}
+/* ---------- Devis ---------- */
+function pick(id){$("q_"+id).value=Math.max(1,+$("q_"+id).value);calc();$("devis").scrollIntoView()}
+function calc(){
+  var c=CONFIG,lines=[],sub=0;
+  c.all.forEach(function(s){var q=Math.max(0,+$("q_"+s.id).value||0);if(q){lines.push({nom:s.nom,q:q,pu:s.prix,t:q*s.prix});sub+=q*s.prix}});
+  var tr=sub?c.transport:0,ins=sub*c.installationPct,ht=sub+tr+ins,tva=ht*c.tva,total=ht+tva;
+  var r={lines:lines,sub:sub,tr:tr,ins:ins,tva:tva,total:total,acompte:total*c.acomptePct};
+  $("tot").innerHTML="<div><span>Sous-total</span><span>"+fmt(sub)+"</span></div><div><span>Transport</span><span>"+fmt(tr)+"</span></div><div><span>Installation ("+Math.round(c.installationPct*100)+" %)</span><span>"+fmt(ins)+"</span></div><div><span>TVA ("+Math.round(c.tva*100)+" %)</span><span>"+fmt(tva)+"</span></div><div class='g'><span>Total</span><span>"+fmt(total)+"</span></div><div><span>Acompte ("+Math.round(c.acomptePct*100)+" %)</span><span>"+fmt(r.acompte)+"</span></div>";
+  return r;
+}
+/* Validation : retourne les données ou null */
+function check(needSrv){
+  var rules=[["f_nom",function(v){return v.trim().length>=3},"Entrez votre nom complet."],
+    ["f_tel",function(v){return /^\+?[\d\s().-]{8,}$/.test(v)},"Entrez un numéro valide."],
+    ["f_mail",function(v){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)},"Entrez un email valide."],
+    ["f_type",function(v){return v!==""},"Choisissez un type de client."],
+    ["f_lieu",function(v){return v!==""},"Choisissez un événement ou un lieu."],
+    ["f_date",function(v){return v!==""&&v>=$("f_date").min},"Choisissez une date à venir."],
+    ["f_adr",function(v){return v.trim().length>=4},"Entrez l’adresse du lieu."]];
+  var first=null,ok=true;
+  rules.forEach(function(r){var el=$(r[0]),good=r[1](el.value);el.setAttribute("aria-invalid",!good);$("e_"+r[0]).textContent=good?"":r[2];if(!good&&!first)first=el;ok=ok&&good});
+  var q=calc(),noSrv=needSrv&&!q.lines.length&&!$("f_msg").value.trim();
+  $("e_srv").textContent=noSrv?"Choisissez au moins une prestation ou écrivez un message.":"";
+  if(noSrv){ok=false;if(!first)first=$("srv")}
+  if(!ok){first.scrollIntoView({block:"center"});if(first.focus)first.focus();return null}
+  return q;
+}
+function genNum(){var d=new Date();return "DEV-"+d.getFullYear()+("0"+(d.getMonth()+1)).slice(-2)+("0"+d.getDate()).slice(-2)+"-"+Math.floor(1000+Math.random()*9000)}
+function send(mode){
+  var q=check(true);if(!q)return;
+  if(!$("f_ok").checked){$("e_f_ok").textContent="Cochez cette case pour continuer.";$("f_ok").focus();return}$("e_f_ok").textContent="";
+  var n=genNum(),v=function(i){return $(i).value.trim()};
+  var sv=[$("s_loc").checked&&"Location",$("s_ins").checked&&"Installation",$("s_dem").checked&&"Démontage"].filter(Boolean).join(", ");
+  var m="Demande "+n+" – "+CONFIG.nom+"\nClient : "+v("f_nom")+" ("+v("f_type")+")\nTél : "+v("f_tel")+"\nEmail : "+v("f_mail")+"\nÉvénement/lieu : "+v("f_lieu")+"\nDate : "+v("f_date")+"\nAdresse : "+v("f_adr")+"\nSurface : "+(v("f_surf")||"-")+" m²\nBudget : "+(v("f_bud")||"-")+" "+CONFIG.devise+"\nStyle : "+(v("f_style")||"-")+"\nServices : "+(sv||"-")+"\n\nPrestations :\n"+(q.lines.map(function(l){return "- "+l.nom+" x"+l.q+" = "+fmt(l.t)}).join("\n")||"-")+"\nTotal TTC estimé : "+fmt(q.total)+"\nAcompte : "+fmt(q.acompte)+"\n\nMessage : "+(v("f_msg")||"-");
+  var ok=$("ok");ok.style.display="block";
+  ok.innerHTML="Demande préparée. Votre numéro : <strong>"+n+"</strong><br>Statut : <span class='st'>On va vous contacter</span><br>Votre demande est confirmée seulement après notre appel téléphonique. Gardez ce numéro pour le suivi. "+(mode==="wa"?"WhatsApp s’ouvre avec votre message : appuyez sur envoyer.":"Votre application email s’ouvre : appuyez sur envoyer.");
+  if(mode==="wa")window.open("https://wa.me/"+CONFIG.whatsapp+"?text="+encodeURIComponent(m),"_blank");
+  else location.href="mailto:"+CONFIG.email+"?subject="+encodeURIComponent("Demande de devis "+n)+"&body="+encodeURIComponent(m);
+}
+/* ---------- Facture proforma ---------- */
+function showPf(){
+  var q=check(false);if(!q)return;
+  if(!q.lines.length){$("e_srv").textContent="Choisissez au moins une prestation pour la proforma.";$("srv").scrollIntoView();return}
+  var v=function(i){return esc($(i).value.trim())},c=CONFIG,d=new Date(),ex=new Date(Date.now()+c.validiteJours*864e5);
+  $("pf").style.display="block";
+  $("pf").innerHTML='<div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem"><div><div class="logo">'+(c.logo?'<img src="'+esc(c.logo)+'" alt="" height="44">':"")+' Le Comptoir Déco</div>'+c.slogan+'<br>'+c.adresse+'<br>'+c.telephone+' · '+c.email+'</div><div style="text-align:right"><h3 style="margin:0">FACTURE PROFORMA</h3>N° '+genNum().replace("DEV","PRO")+'<br>Date : '+d.toLocaleDateString("fr-FR")+'<br>Valable jusqu’au '+ex.toLocaleDateString("fr-FR")+'</div></div>'+
+  '<p><strong>Client :</strong> '+v("f_nom")+' ('+v("f_type")+')<br>'+v("f_tel")+' · '+v("f_mail")+'<br><strong>Prestation :</strong> '+v("f_lieu")+' le '+v("f_date")+', '+v("f_adr")+'</p>'+
+  '<table><thead><tr><th>Désignation</th><th class="n">Qté</th><th class="n">P.U.</th><th class="n">Total</th></tr></thead><tbody>'+q.lines.map(function(l){return "<tr><td>"+esc(l.nom)+'</td><td class="n">'+l.q+'</td><td class="n">'+fmt(l.pu)+'</td><td class="n">'+fmt(l.t)+"</td></tr>"}).join("")+
+  '<tr><td colspan="3">Sous-total</td><td class="n">'+fmt(q.sub)+'</td></tr><tr><td colspan="3">Transport</td><td class="n">'+fmt(q.tr)+'</td></tr><tr><td colspan="3">Installation</td><td class="n">'+fmt(q.ins)+'</td></tr><tr><td colspan="3">TVA ('+Math.round(c.tva*100)+' %)</td><td class="n">'+fmt(q.tva)+'</td></tr><tr><th colspan="3">TOTAL TTC</th><th class="n">'+fmt(q.total)+'</th></tr><tr><td colspan="3">Acompte à la commande ('+Math.round(c.acomptePct*100)+' %)</td><td class="n">'+fmt(q.acompte)+'</td></tr></tbody></table>'+
+  '<p><strong>Conditions :</strong> '+esc(c.conditions)+'</p><button class="btn" onclick="window.print()" style="background:#1F1B18;color:#C9A24D">Télécharger en PDF</button> <small>(choisissez « Enregistrer en PDF » dans la fenêtre d’impression)</small>';
+  $("pf").scrollIntoView({behavior:"smooth"});
+}
+/* ---------- Espace client (tout par WhatsApp) ---------- */
+function toWa(m){window.open("https://wa.me/"+CONFIG.whatsapp+"?text="+encodeURIComponent(m),"_blank")}
+function say(id,t,bad){var e=$(id);e.textContent=t;e.style.color=bad?"#c0392b":"inherit"}
+function typeChg(){$("c_entw").style.display=$("c_type").value==="Entreprise"?"block":"none"}
+function register(edit){
+  var v=function(i){return $(i).value.trim()},co=v("c_type")==="Entreprise",e="";
+  if(v("c_nom").length<3)e="Entrez votre nom.";else if(!/^\+?[\d\s().-]{8,}$/.test(v("c_tel")))e="Entrez un numéro de téléphone valide.";
+  else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v("c_mail")))e="Entrez un email valide.";else if(!v("c_type"))e="Choisissez un type de client.";
+  else if(co&&v("c_ent").length<2)e="Entrez le nom de l’entreprise.";else if(!$("c_ok").checked)e="Acceptez la mention de confidentialité.";
+  if(e){say("c_msg",e,1);return}
+  toWa((edit?"MODIFICATION DE PROFIL":"INSCRIPTION CLIENT")+" – "+CONFIG.nom+"\nNom : "+v("c_nom")+"\nTéléphone : "+v("c_tel")+"\nEmail : "+v("c_mail")+"\nType : "+v("c_type")+(co?"\nEntreprise : "+v("c_ent"):"")+"\nConsentement confidentialité : oui");
+  say("c_msg","WhatsApp s’ouvre : appuyez sur envoyer. Nous vous confirmons par message.")
+}
+function follow(k){
+  var n=$("r_num").value.trim().toUpperCase();
+  if(!/^DEV-\d{8}-\d{4}$/.test(n)){say("r_msg","Entrez votre numéro de demande (ex. DEV-20261108-1234).",1);return}
+  if(k==="photos"){toWa("Photos d’inspiration – demande "+n+"\nJe joins mes photos dans cette conversation.");say("r_msg","Dans WhatsApp, appuyez sur le trombone pour joindre vos photos, puis envoyez.");return}
+  var d=$("r_date").value,days=(new Date(d)-new Date(new Date().toISOString().slice(0,10)))/864e5;
+  if(!d){say("r_msg","Indiquez la date de la prestation.",1);return}
+  if(days<30){say("r_msg","La réponse se donne au plus tard un mois avant la prestation. Appelez-nous au "+CONFIG.telephone+".",1);return}
+  toWa((k==="accept"?"J’ACCEPTE":"JE REFUSE")+" le devis – demande "+n+"\nDate de la prestation : "+d);say("r_msg","Message prêt : appuyez sur envoyer dans WhatsApp.")
+}
+function payDecl(){
+  var v=function(i){return $(i).value.trim()},n=$("r_num").value.trim().toUpperCase();
+  if(v("a_ref").length<3||!(+v("a_mont")>0)||!v("a_date")){say("a_msg","Renseignez la référence, le montant et la date.",1);return}
+  toWa("ACOMPTE PAYÉ (déclaration) – demande "+(n||"n° à préciser")+"\nMode : "+v("a_mode")+"\nRéférence : "+v("a_ref")+"\nMontant : "+fmt(+v("a_mont"))+"\nDate : "+v("a_date"));
+  say("a_msg","Statut : acompte déclaré, en attente de confirmation. Nous vous envoyons le reçu après vérification.")
+}
+function initClient(){var m=CONFIG.mobileMoney;$("priv").textContent=CONFIG.confidentialite;
+  $("a_info").textContent=m.numero?"Envoyez l’acompte par "+m.operateur+" au "+m.numero+" ("+m.titulaire+"), puis déclarez-le ici.":"Le numéro de paiement vous est communiqué par WhatsApp après acceptation du devis. Déclarez ensuite votre paiement ici."}
+initClient();
+init();
+</script>
+</body>
+</html>

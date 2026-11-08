@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Gestion – Le Comptoir Déco</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font:400 .95rem/1.6 Poppins,sans-serif;background:#FAF6F0;color:#2E2A27}
+main{max-width:860px;margin:auto;padding:1rem}h1,h2{font-family:"Playfair Display",serif;margin:.4rem 0}
+section{background:#fff;border:1px solid #e6dccd;border-radius:10px;padding:1rem;margin-bottom:1rem}
+input,select{width:100%;padding:.55rem;border:1px solid #d8ccba;border-radius:8px;font:inherit}label{font-size:.8rem;font-weight:500}
+.g{display:grid;gap:.6rem}@media(min-width:700px){.g{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(4,1fr)}}
+.btn{border:0;border-radius:999px;padding:.6rem 1.2rem;background:#1F1B18;color:#C9A24D;font:500 .9rem Poppins;cursor:pointer;margin:.3rem .3rem 0 0}.btn.alt{background:none;color:#1F1B18;border:1.5px solid #1F1B18}
+.row{display:grid;grid-template-columns:3fr 1fr 1.5fr auto;gap:.4rem;margin-bottom:.4rem}
+#doc{display:none;background:#fff;color:#1F1B18;padding:1.2rem;border:1px solid #ddd;border-radius:10px;font-size:.88rem}
+#doc table{width:100%;border-collapse:collapse;margin:.8rem 0}#doc td,#doc th{padding:.35rem;border-bottom:1px solid #ddd;text-align:left}#doc .n{text-align:right}
+.warn{background:#1F1B18;color:#FAF6F0;padding:.7rem 1rem;border-radius:10px;font-size:.82rem}
+@media print{body *{visibility:hidden}#doc,#doc *{visibility:visible}#doc{display:block!important;position:absolute;left:0;top:0;width:100%;border:0}}
+</style></head><body><main>
+<h1>Espace gestion</h1>
+<p class="warn">Outil local : il n’enregistre rien. Ouvrez-le, préparez le document, imprimez-le en PDF ou envoyez le message, puis fermez. Ne partagez pas son adresse.</p>
+
+<section><h2>Client</h2><div class="g">
+<div><label for="cn">Nom</label><input id="cn"></div><div><label for="ct">Téléphone WhatsApp</label><input id="ct" type="tel"></div>
+<div><label for="no">Numéro de demande</label><input id="no" placeholder="DEV-20261108-1234"></div></div></section>
+
+<section><h2>Devis / proforma</h2><div id="rows"></div>
+<button class="btn alt" onclick="addRow()">+ Ajouter une ligne</button>
+<div class="g g3" style="margin-top:.8rem">
+<div><label for="tr">Transport (FBu)</label><input id="tr" type="number" value="20000" oninput="tot()"></div>
+<div><label for="in">Installation (%)</label><input id="in" type="number" value="10" oninput="tot()"></div>
+<div><label for="tv">TVA (%)</label><input id="tv" type="number" value="18" oninput="tot()"></div>
+<div><label for="ac">Acompte (%)</label><input id="ac" type="number" value="50" oninput="tot()"></div>
+<div><label for="va">Validité (jours)</label><input id="va" type="number" value="15"></div></div>
+<p id="tt" aria-live="polite"></p>
+<button class="btn" onclick="proforma()">Aperçu / PDF</button><button class="btn alt" onclick="sendPf()">Envoyer au client (WhatsApp)</button></section>
+
+<section><h2>Acompte reçu</h2><div class="g g3">
+<div><label for="rf">Référence</label><input id="rf"></div><div><label for="rm">Montant (FBu)</label><input id="rm" type="number"></div>
+<div><label for="rd">Date</label><input id="rd" type="date"></div><div><label for="rmo">Mode</label><select id="rmo"><option>Mobile Money</option><option>Espèces</option><option>Virement</option></select></div></div>
+<button class="btn" onclick="recu()">Reçu / PDF</button><button class="btn alt" onclick="msg('acompte')">Prévenir le client</button></section>
+
+<section><h2>Messages et rendez-vous</h2><div class="g g3">
+<div><label for="md">Date</label><input id="md" type="date"></div><div><label for="mh">Heure</label><input id="mh" type="time"></div>
+<div><label for="mt">Type</label><select id="mt"><option>visite</option><option>appel</option></select></div></div>
+<button class="btn alt" onclick="msg('conf')">Demande bien reçue</button><button class="btn alt" onclick="msg('devis')">Devis prêt</button><button class="btn alt" onclick="msg('rdv')">Confirmer le rendez-vous</button><button class="btn alt" onclick="msg('rappel')">Rappel</button></section>
+
+<div id="doc"></div>
+<script>
+var C={nom:"Le Comptoir Déco",slogan:"Décoration d’intérieur",logo:"images/logo.jpg",tel:"+257 62381032",mail:"plamedindagano1@gmail.com",adr:"Kigobe Sud, Av Kigunga N°10",cond:"Acompte à la commande, solde le jour de la prestation. Prix confirmés après visite du lieu.",wa:"25761912543"};
+var $=function(i){return document.getElementById(i)},R=[{n:"Pack Confort",q:1,p:350000}];
+var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};
+var f=function(n){return Math.round(n).toLocaleString("fr-FR")+" FBu"};
+function rows(){$("rows").innerHTML=R.map(function(r,i){return '<div class="row"><input value="'+esc(r.n)+'" oninput="R['+i+'].n=this.value" aria-label="Désignation"><input type="number" value="'+r.q+'" oninput="R['+i+'].q=+this.value;tot()" aria-label="Quantité"><input type="number" value="'+r.p+'" oninput="R['+i+'].p=+this.value;tot()" aria-label="Prix unitaire"><button class="btn alt" onclick="R.splice('+i+',1);rows();tot()" aria-label="Supprimer">✕</button></div>'}).join("");tot()}
+function addRow(){R.push({n:"",q:1,p:0});rows()}
+function T(){var s=0;R.forEach(function(r){s+=r.q*r.p});var tr=s?+$("tr").value:0,i=s*$("in").value/100,h=s+tr+i,v=h*$("tv").value/100,t=h+v;return{s:s,tr:tr,i:i,v:v,t:t,a:t*$("ac").value/100}}
+function tot(){var t=T();$("tt").innerHTML="Sous-total "+f(t.s)+" · Total TTC <strong>"+f(t.t)+"</strong> · Acompte <strong>"+f(t.a)+"</strong>"}
+function head(t,sub){return '<div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem"><div><img src="'+C.logo+'" alt="" height="56" onerror="this.remove()"><br><strong>'+C.nom+'</strong><br>'+C.slogan+'<br>'+C.adr+'<br>'+C.tel+' · '+C.mail+'</div><div style="text-align:right"><h2>'+t+'</h2>'+sub+'</div></div><p><strong>Client :</strong> '+esc($("cn").value)+' · '+esc($("ct").value)+'</p>'}
+function show(h){var d=$("doc");d.innerHTML=h+'<p><button class="btn" onclick="print()">Imprimer / enregistrer en PDF</button></p>';d.style.display="block";d.scrollIntoView()}
+function proforma(){var t=T(),d=new Date(),e=new Date(Date.now()+$("va").value*864e5),n=$("no").value||"PRO-"+d.getFullYear()+"-"+Math.floor(1000+Math.random()*9000);
+show(head("FACTURE PROFORMA","N° "+esc(n)+"<br>Date : "+d.toLocaleDateString("fr-FR")+"<br>Valable jusqu’au "+e.toLocaleDateString("fr-FR"))+'<table><tr><th>Désignation</th><th class="n">Qté</th><th class="n">P.U.</th><th class="n">Total</th></tr>'+R.map(function(r){return"<tr><td>"+esc(r.n)+'</td><td class="n">'+r.q+'</td><td class="n">'+f(r.p)+'</td><td class="n">'+f(r.q*r.p)+"</td></tr>"}).join("")+'<tr><td colspan="3">Sous-total</td><td class="n">'+f(t.s)+'</td></tr><tr><td colspan="3">Transport</td><td class="n">'+f(t.tr)+'</td></tr><tr><td colspan="3">Installation ('+$("in").value+' %)</td><td class="n">'+f(t.i)+'</td></tr><tr><td colspan="3">TVA ('+$("tv").value+' %)</td><td class="n">'+f(t.v)+'</td></tr><tr><th colspan="3">TOTAL TTC</th><th class="n">'+f(t.t)+'</th></tr><tr><td colspan="3">Acompte ('+$("ac").value+' %)</td><td class="n">'+f(t.a)+'</td></tr></table><p><strong>Conditions :</strong> '+C.cond+'</p>')}
+function recu(){show(head("REÇU D’ACOMPTE","Statut : <strong>Acompte reçu</strong><br>Date : "+esc($("rd").value))+'<p>Nous avons bien reçu la somme de <strong>'+f(+$("rm").value)+'</strong> par '+esc($("rmo").value)+', référence <strong>'+esc($("rf").value)+'</strong>'+($("no").value?', pour la demande '+esc($("no").value):'')+'.</p><p>Merci de votre confiance.</p>')}
+function wa(m){var d=$("ct").value.replace(/\D/g,"");if(!d){alert("Entrez le téléphone WhatsApp du client.");return}if(d.length<=8)d="257"+d;window.open("https://wa.me/"+d+"?text="+encodeURIComponent(m),"_blank")}
+function sendPf(){var t=T();wa("Bonjour "+$("cn").value+", voici votre proforma "+$("no").value+" – "+C.nom+".\nTotal TTC : "+f(t.t)+"\nAcompte : "+f(t.a)+"\nValable "+$("va").value+" jours.\nLe PDF suit dans cette conversation.")}
+function msg(k){var n=$("cn").value,r=$("no").value,m={
+conf:"Bonjour "+n+", nous avons bien reçu votre demande "+r+". Nous vous appelons très bientôt pour la confirmer. – "+C.nom,
+devis:"Bonjour "+n+", votre devis pour la demande "+r+" est prêt. Vous pouvez l’accepter ou le refuser par message ici. – "+C.nom,
+rdv:"Bonjour "+n+", votre "+$("mt").value+" est confirmé(e) le "+$("md").value+" à "+$("mh").value+". – "+C.nom,
+rappel:"Bonjour "+n+", rappel : "+$("mt").value+" prévu(e) le "+$("md").value+" à "+$("mh").value+". – "+C.nom,
+acompte:"Bonjour "+n+", nous confirmons la réception de votre acompte de "+f(+$("rm").value)+" (réf. "+$("rf").value+"). Votre reçu suit. – "+C.nom}[k];wa(m)}
+rows();
+</script></main></body></html>
